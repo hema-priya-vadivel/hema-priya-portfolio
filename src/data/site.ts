@@ -385,16 +385,43 @@ export const moreSkills: SkillGroup[] = [
 
 export const education = {
   school: "Chennai Institute of Technology",
-  degree: "Bachelor of Engineering — Computer Science and Engineering",
-  year: "2023",
-  detail: "CGPA 9.64 / 10 · Graduated 1st out of 180 students · First Class with Distinction",
+  degree: "Bachelor of Engineering",
+  field: "Computer Science and Engineering",
+  graduated: "2023",
+  cgpa: "9.64",
+  cgpaScale: "10",
+  distinction: "First Class with Distinction",
+  rank: {
+    position: "1st",
+    eyebrow: "Academic achievement",
+    title: "- College Rank Holder",
+    text: "Ranked first in Computer Science & Engineering",
+  },
+
 };
 
 export const certifications = [
-  "Programming in Java — NPTEL, IIT Kharagpur (91%, Elite + Gold)",
-  "Java Certification — HackerRank",
-  "AI for Everyone — DeepLearning.ai",
-  "Web Design for Everybody (Capstone) — University of Michigan",
+  {
+    title: "Programming in Java",
+    issuer: "NPTEL, IIT Kharagpur",
+    note: "91% · Elite + Gold",
+    url: "https://lnkd.in/p/gJAub67A",
+  },
+  {
+    title: "Java Certification",
+    issuer: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/cd772d88c790",
+  },
+  {
+    title: "AI for Everyone",
+    issuer: "DeepLearning.ai",
+    url: "https://www.coursera.org/account/accomplishments/verify/765MDGPVJQ4N",
+  },
+  {
+    title: "Web Design for Everybody (Capstone)",
+    issuer: "University of Michigan",
+    url: "https://www.coursera.org/account/accomplishments/verify/L9K3ZT36PYFH",
+  },
 ];
 
 export interface AiTopic {
