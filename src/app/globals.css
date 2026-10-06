@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --background: #fafaf9;
+  --surface: #ffffff;
+  --foreground: #18181b;
+  --muted: #52525b;
+  --border: #e4e4e7;
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --background: #0c0c0f;
+  --surface: #131318;
+  --foreground: #ececf1;
+  --muted: #a1a1aa;
+  --border: #26262e;
+  --accent: #8b8cf8;
+  --accent-foreground: #0c0c0f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@keyframes principle-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.principle-in {
+  animation: principle-in 0.35s ease-out both;
+}
+
+/* Subtle technical grid behind the hero */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 30% 0%, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 30% 0%, black 0%, transparent 70%);
+  opacity: 0.55;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  #contact,
+  .no-print {
+    display: none !important;
+  }
+}
