@@ -2,7 +2,7 @@
 
 Personal portfolio of **Hema Priya V**, Quality Engineer II / SDET II (automation framework design, web and mobile UI automation, CI/CD, AI-assisted quality engineering).
 
-Built with **Next.js (App Router)**, **TypeScript** and **Tailwind CSS v4**. Contact email is sent through **Resend**.
+Built with **Next.js (App Router)**, **TypeScript** and **Tailwind CSS v4**. Contact email is sent through **[Resend](https://resend.com/)**, and the site is designed to deploy on **[Vercel](https://vercel.com/)**.
 
 > This repo uses a recent Next.js with breaking changes. When changing framework behaviour, read the bundled docs in `node_modules/next/dist/docs/` (see `AGENTS.md`).
 
@@ -125,7 +125,7 @@ scripts/
 
 ## Deploying (Vercel)
 
-1. Import the repo into Vercel.
+1. Import the repo into [Vercel](https://vercel.com/).
 2. Add the environment variables above (at least `NEXT_PUBLIC_SITE_URL` and the three Resend variables).
-3. Use a `FROM_EMAIL` on a domain you've verified in Resend.
+3. Use a `FROM_EMAIL` on a domain you've verified in [Resend](https://resend.com/).
 4. Redeploy after changing any variable.
